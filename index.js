@@ -1,6 +1,6 @@
-const hour = $(".hour");
-const minute = $(".minute");
-const second = $(".second");
+const hour = document.querySelector(".hour");
+const minute = document.querySelector(".minute");
+const second = document.querySelector(".second");
 
 function setDate() {
   const now = new Date();
@@ -13,9 +13,9 @@ function setDate() {
   const minuteDegree = (getMinute / 60) * 360;
   const hourDegree = (getHour / 12) * 360;
 
-  second.css("transform", `rotate(${secondDegree}deg)`);
-  minute.css("transform", `rotate(${minuteDegree}deg)`);
-  hour.css("transform", `rotate(${hourDegree}deg)`);
+  second.style.transform = `rotate(${secondDegree}deg)`;
+  minute.style.transform = `rotate(${minuteDegree}deg)`;
+  hour.style.transform = `rotate(${hourDegree}deg)`;
 }
 
 setInterval(setDate, 1000);
